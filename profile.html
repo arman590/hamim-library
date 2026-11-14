@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>زما المارۍ | Hamim Library</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Pashto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="profile">
+<header><a class="logo" href="index.html">📚 همیم کتابتون</a>
+<nav><a href="index.html" data-i18n="home">کور</a><a href="library.html" data-i18n="library">کتابتون</a><a class="active" href="profile.html" data-i18n="profile">زما المارۍ</a></nav>
+<div class="tools"><button id="themeBtn" data-i18n="theme">شپې حالت</button><button id="langBtn">English</button></div></header>
+<main>
+<h1 data-i18n="shelf">زما المارۍ</h1>
+<p><small>ډیټا په LocalStorage کې خوندي ده — سرور ته اړتیا نشته.</small></p>
+<h2>♥ <span data-i18n="favorites">خوښ شوي</span></h2><div class="grid" id="favList"></div>
+<h2 style="margin-top:1.5rem">✓ <span data-i18n="read_list">لوستل شوي</span></h2><div class="grid" id="readList"></div>
+<h2 style="margin-top:1.5rem">📖 <span data-i18n="progress">پرمختګ</span></h2><div class="grid" id="progList"></div>
+</main>
+<footer>© 2026 همیم کتابتون</footer>
+<script src="js/data.js"></script><script src="js/i18n.js"></script><script src="js/app.js"></script>
+</body></html>

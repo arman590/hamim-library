@@ -1,0 +1,31 @@
+:root{--p:#556B2F;--s:#8FBC8F;--bg:#FDFDF5;--card:#fff;--text:#333;--mut:#666;--line:#dfe6cf}
+[data-theme="dark"]{--bg:#1A1A1A;--card:#262626;--text:#E0E0E0;--mut:#aaa;--line:#3a3a3a;--s:#6da06d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans Pashto',Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+a{color:var(--p);text-decoration:none}
+header{position:sticky;top:0;background:var(--p);color:#fff;padding:.8rem 1rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;justify-content:space-between;z-index:10}
+.logo{font-size:1.4rem;font-weight:700;color:#fff}
+nav{display:flex;gap:1rem;flex-wrap:wrap}
+nav a{color:#fff}
+nav a.active{border-bottom:2px solid #fff}
+.tools{display:flex;gap:.5rem}
+button,.btn{cursor:pointer;border:1px solid var(--p);background:var(--p);color:#fff;padding:.45rem .9rem;border-radius:8px;font:inherit}
+button.ghost,.btn.ghost{background:transparent;color:var(--p)}
+main{max-width:1000px;margin:auto;padding:1.2rem}
+.hero{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;padding:2rem;border-radius:14px;text-align:center}
+.hero h1{font-size:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem}
+.cover{font-size:3rem;text-align:center;background:#eef2df;border-radius:8px;padding:.5rem}
+[data-theme="dark"] .cover{background:#333}
+.badge{display:inline-block;background:var(--s);color:#1a1a1a;padding:0 .5rem;border-radius:20px;font-size:.85rem}
+.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+input,select{font:inherit;padding:.5rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);max-width:100%}
+.reader{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.5rem;margin-top:1rem}
+.progress{height:10px;background:#ddd;border-radius:10px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--p)}
+.poem{background:var(--card);border-inline-start:4px solid var(--p);padding:1rem;margin:1rem 0;border-radius:8px}
+.stats{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0}
+.stat{flex:1;min-width:120px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem;text-align:center}
+footer{text-align:center;padding:2rem;color:var(--mut)}
+@media(max-width:600px){.hero h1{font-size:1.5rem}header{justify-content:center;text-align:center}}

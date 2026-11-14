@@ -1,0 +1,8 @@
+// i18n.js — پښتو / انګلیسي ژباړه
+const I18N={
+ps:{home:"کور",library:"کتابتون",profile:"زما المارۍ",hero_title:"همیم کتابتون ته ښه راغلاست",hero_sub:"پښتو کتابونه، شعرونه او کیسې — وړیا ولولئ",new_books:"نوي کتابونه",poem_day:"د ورځې شعر",search:"لټون...",all:"ټول",read:"ولولئ",bookmark:"بکمارک",read_done:"لوستل شوی",font:"فونټ",progress:"پرمختګ",shelf:"زما المارۍ",favorites:"خوښ شوي",read_list:"لوستل شوي",no_books:"هیڅ کتاب ونه موندل شو",genre:"کټګوري",author:"لیکوال",year:"کال",theme:"شپې حالت"},
+en:{home:"Home",library:"Library",profile:"My Shelf",hero_title:"Welcome to Hamim Library",hero_sub:"Pashto books, poems and stories — read free",new_books:"New Books",poem_day:"Poem of the Day",search:"Search...",all:"All",read:"Read",bookmark:"Bookmark",read_done:"Read",font:"Font",progress:"Progress",shelf:"My Shelf",favorites:"Favorites",read_list:"Read",no_books:"No books found",genre:"Genre",author:"Author",year:"Year",theme:"Dark Mode"}};
+let currentLang=localStorage.getItem("hamim_lang")||"ps";
+function t(k){return (I18N[currentLang]&&I18N[currentLang][k])||I18N.ps[k]||k}
+function applyI18n(){document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=t(e.dataset.i18n)});document.querySelectorAll("[data-i18n-ph]").forEach(e=>{e.placeholder=t(e.dataset.i18nPh)});document.documentElement.lang=currentLang==="ps"?"ps":"en";document.documentElement.dir=currentLang==="ps"?"rtl":"ltr";const b=document.getElementById("langBtn");if(b)b.textContent=currentLang==="ps"?"English":"پښتو"}
+function setLang(l){currentLang=l;localStorage.setItem("hamim_lang",l);applyI18n();if(typeof renderPage==="function")renderPage()}
